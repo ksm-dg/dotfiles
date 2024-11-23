@@ -1,0 +1,30 @@
+{
+    "git.autofetch": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "vim.vimrc.enable": "true",
+    "vim.vimrc.path": "~/.vimrc",
+    "editor.fontSize": 14,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.fontFamily": "MesloLGM Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font, Menlo, Monaca, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 14,
+    "notebook.lineNumbers": "on",
+    "editor.cursorSurroundingLines": 3,
+    "editor.rulers": [
+        110
+    ],
+    "jupyter.askForKernelRestart": false,
+    "jupyter.debugJustMyCode": false,
+    "debugpy.debugJustMyCode": false,
+    "chat.editor.fontSize": 14,
+    "git.suggestSmartCommit": false,
+}
