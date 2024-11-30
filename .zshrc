@@ -1,3 +1,5 @@
+#source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -26,3 +28,5 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+export HOMEBREW_NO_AUTO_UPDATE=1
