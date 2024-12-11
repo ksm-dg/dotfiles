@@ -6,14 +6,19 @@ set modelines=0
 set ruler
 set visualbell
 set encoding=utf-8
+set cursorline
 
 set wrap
+
+filetype indent on
+set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set noshiftround
 
+set wildignore+=.pyc,.swp
 set scrolloff=3
 set backspace=indent,eol,start
 
@@ -23,6 +28,7 @@ set showmode
 set showcmd
 
 set hlsearch
+set incsearch
 
 set t_Co=256
 set background=dark
