@@ -10,6 +10,7 @@ fi
 
 alias ls="/opt/homebrew/opt/coreutils/libexec/gnubin/ls --color --group-directories-first"
 alias ll="ls --group-directories-first -GFlash"
+alias l.="ls -ld .?*"
 alias cp="/opt/homebrew/opt/coreutils/libexec/gnubin/cp"
 alias ggraph='git log --graph --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s %C(auto)%d" --date=short'
 

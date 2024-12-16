@@ -8,3 +8,6 @@
 find . -not \( -path "./.git" -type d -prune \) -type f -maxdepth 3 \
     ! -name ".DS_Store" -and -name ".*" -or -name "config" | 
    sed -e 's/^\.\///' | xargs -I {} ln -s -f `pwd`/{} ~/{}
+
+# VSCode settings
+ln -s ~/projects/dotfiles/settings.json /Users/ksm/Library/Application\ Support/Code/User/settings.json
