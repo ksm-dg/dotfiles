@@ -21,12 +21,17 @@ bindkey "\e[F"    end-of-line
 bindkey "^[[1;3D"   backward-word  
 bindkey "^[[1;3C"   forward-word
 
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+#autoload -U up-line-or-beginning-search
+#autoload -U down-line-or-beginning-search
+#zle -N up-line-or-beginning-search
+#zle -N down-line-or-beginning-search
+#bindkey "^[[A" up-line-or-beginning-search # Up
+#bindkey "^[[B" down-line-or-beginning-search # Down
+#bindkey "^[[5~" up-line-or-beginning-search # Up
+#bindkey "^[[6~" down-line-or-beginning-search # Down
+
+# page up:  ^[[5~
+# page down:  ^[[6~
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 eval "$(uv generate-shell-completion zsh)"
