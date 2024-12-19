@@ -16,5 +16,11 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.fontFamily": "MesloLGM Nerd Font, Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font, Menlo, Monaca, 'Courier New', monospace",
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "notebook.lineNumbers": "on",
+    "editor.cursorSurroundingLines": 3,
+    "editor.rulers": [
+        110
+    ],
+    "jupyter.askForKernelRestart": false
 }
