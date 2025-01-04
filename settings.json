@@ -27,4 +27,6 @@
     "debugpy.debugJustMyCode": false,
     "chat.editor.fontSize": 14,
     "git.suggestSmartCommit": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
 }
