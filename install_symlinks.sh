@@ -6,8 +6,9 @@
 #                                                   ^ this dir
 # First part of find an idiom to ignore the .git directory
 find . -not \( -path "./.git" -type d -prune \) -type f -maxdepth 3 \
-    ! -name ".DS_Store" -and -name ".*" -or -name "config" | 
+    ! -name ".DS_Store" -and -name ".*" -or -name "config" -or -name "karabiner.json" | 
+   #sed -e 's/^\.\///' | xargs -I {} echo `pwd`/{} ~/{}
    sed -e 's/^\.\///' | xargs -I {} ln -s -f `pwd`/{} ~/{}
 
 # VSCode settings
-ln -s ~/projects/dotfiles/settings.json /Users/ksm/Library/Application\ Support/Code/User/settings.json
+ln -s -f ~/projects/dotfiles/settings.json /Users/ksm/Library/Application\ Support/Code/User/settings.json
