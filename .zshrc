@@ -2,6 +2,8 @@
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export GOPATH="/Users/ksm/go"
+export PATH="$GOPATH/bin:$PATH"
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 bindkey              '^I'         menu-complete
