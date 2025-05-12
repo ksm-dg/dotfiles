@@ -29,4 +29,5 @@
     "git.suggestSmartCommit": false,
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.startupEditor": "none"
 }
