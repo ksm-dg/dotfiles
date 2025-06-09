@@ -1,13 +1,17 @@
-# Need these to fix tmux interacting poorly with autocomplete/omp
-
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export GOPATH="/Users/ksm/go"
 export PATH="$GOPATH/bin:$PATH"
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-bindkey              '^I'         menu-complete
-bindkey "$terminfo[kcbt]" reverse-menu-complete
+# basic history search forward and backward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# Use fancier autocomplete
+# Diasbled for now because I didn't like the "assume first possible selection" folder autocomplete
+#source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# bindkey              '^I'         menu-complete
+# bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   #eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin.omp.json)"
@@ -28,5 +32,6 @@ bindkey "^[[1;3D"   backward-word
 bindkey "^[[1;3C"   forward-word
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+autoload -Uz compinit && compinit # needed to fix cryptic error about eval missing compdef
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
