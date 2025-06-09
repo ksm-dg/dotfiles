@@ -35,3 +35,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 autoload -Uz compinit && compinit # needed to fix cryptic error about eval missing compdef
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ksm/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
