@@ -4,8 +4,11 @@ export GOPATH="/Users/ksm/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # basic history search forward and backward
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # Use fancier autocomplete
 # Diasbled for now because I didn't like the "assume first possible selection" folder autocomplete
