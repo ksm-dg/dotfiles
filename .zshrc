@@ -16,10 +16,24 @@ bindkey "^[[B" history-beginning-search-forward-end
 # bindkey              '^I'         menu-complete
 # bindkey "$terminfo[kcbt]" reverse-menu-complete
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  #eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/catppuccin.omp.json)"
-  eval "$(oh-my-posh init zsh --config ~/.ksm_theme.omp.json)"
-fi
+# Native zsh prompt: no theme framework or external prompt dependency.
+autoload -Uz vcs_info
+zstyle ':vcs_info:git:*' formats ' %F{yellow}git:%b%f'
+
+_prompt_precmd() {
+  vcs_info
+}
+precmd_functions+=(_prompt_precmd)
+
+_prompt_venv() {
+  # A valid venv contains pyvenv.cfg. This also ignores a stale VIRTUAL_ENV.
+  [[ -n ${VIRTUAL_ENV:-} && -f "$VIRTUAL_ENV/pyvenv.cfg" ]] || return
+  print -n -- " %F{magenta}(${VIRTUAL_ENV:t})%f"
+}
+
+setopt prompt_subst
+PROMPT='%F{cyan}%~%f$(_prompt_venv)${vcs_info_msg_0_}
+%F{green}❯%f '
 
 alias ls="/opt/homebrew/opt/coreutils/libexec/gnubin/ls --color --group-directories-first"
 alias ll="ls --group-directories-first -GFlash"
