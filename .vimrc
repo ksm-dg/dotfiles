@@ -39,6 +39,7 @@ colorscheme desert
 set colorcolumn=121
 
 " nuisance typos
+command! W w
 map q: <Nop>
 command Q q
 nnoremap Q <nop>
